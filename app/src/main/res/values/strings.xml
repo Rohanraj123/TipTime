@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">TipTime</string>
+    <string name="base">Base:</string>
+    <string name="tip">Tip:</string>
+    <string name="total">Total:</string>
+    <string name="made_with_love_by_rohan">MADE WITH LOVE BY ROHAN</string>
+    <string name="base1">Base :</string>
+    <string name="bill_amount">Bill Amount</string>
+    <string name="tip2">Tip :</string>
+    <string name="tip_amount">Tip Amount</string>
+    <string name="total2">Total :</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="made_with_love_by_rohan1">CALCULATE TIP IN A MOMENT</string>
+</resources>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbarSize="4dp"
+    tools:context=".MainActivity"
+    android:background="#CB2196F3">
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#3D4DA5">
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Tip Time"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </Toolbar>
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="100dp">
+
+        <TextView
+            android:id="@+id/base"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="@string/base1"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:layout_marginStart="12dp"
+            android:fontFamily="sans-serif-medium"
+            android:background="@drawable/custom_bg" />
+
+        <EditText
+            android:id="@+id/baseAmount"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:inputType="text"
+            android:hint="@string/bill_amount"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/custom_bg" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_below="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvTipPercent"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="%Tip :"
+            android:textSize="25sp"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/custom_bg"
+            android:gravity="center"
+            android:fontFamily="sans-serif-medium" />
+        <SeekBar
+            android:id="@+id/seekbarLabel"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="@drawable/custom_bg"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/tvTipDescription"
+            android:layout_width="100dp"
+            android:background="@drawable/custom_bg"
+            android:gravity="center"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="poor"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_below="@+id/ll2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="100dp">
+
+        <TextView
+            android:id="@+id/tip"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="@string/tip2"
+            android:textSize="25sp"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/custom_bg"
+            android:gravity="center"
+            android:fontFamily="sans-serif-medium" />
+        <TextView
+            android:id="@+id/tvTipAmount"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="12dp"
+            android:layout_gravity="center"
+            android:hint="@string/tip_amount"
+            android:textSize="25sp"
+            android:background="@drawable/custom_bg"
+            android:gravity="center"
+            android:fontFamily="sans-serif-medium" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/ll3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="@string/total2"
+            android:textSize="25sp"
+            android:background="@drawable/custom_bg"
+            android:gravity="center"
+            android:layout_marginStart="12dp"
+            android:fontFamily="sans-serif-medium" />
+        <TextView
+            android:id="@+id/tvTotalAmount"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:hint="@string/total_amount"
+            android:textSize="25sp"
+            android:background="@drawable/custom_bg"
+            android:gravity="center"
+            android:layout_marginStart="12dp"
+            android:fontFamily="sans-serif-medium" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="680dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/made_with_love_by_rohan1"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="50dp" />
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

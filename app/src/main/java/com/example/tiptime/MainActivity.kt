@@ -65,12 +65,12 @@ class MainActivity : AppCompatActivity() {
         })
 
         etBaseAmount.addTextChangedListener(object: TextWatcher {
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+            override fun beforeTextChanged(p0: CharSequence, p1: Int, p2: Int, p3: Int) {}
 
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+            override fun onTextChanged(p0: CharSequence, p1: Int, p2: Int, p3: Int) {}
 
             override fun afterTextChanged(p0: Editable?) {
-                Log.i(TAG, "afterTextChanged $p0")
+                  Log.i(TAG, "afterTextChanged $p0")
                 computeTipandTotal()
             }
 
@@ -98,15 +98,24 @@ class MainActivity : AppCompatActivity() {
             tvTotalAmount.text = ""
             return
         }
-        //1. Get the value of base and tip percent
-        val baseAmount = etBaseAmount.text.toString().toDouble()
-        val tipPercent = seekBarLabel.progress
-        //2. compute tip and total
-        val tipAmount = baseAmount * tipPercent / 100
-        val totalAmount = baseAmount + tipAmount
-        //3. update the UI
-        tvTipAmount.text = "%2f".format(tipAmount)
-        tvTotalAmount.text = "%2f".format(totalAmount)
+        try {
+            // 1. Get the value of base and tip percent
+            val baseAmount = etBaseAmount.text.toString().toDouble()
+            val tipPercent = seekBarLabel.progress
+
+            // 2. Compute tip and total
+            val tipAmount = baseAmount * tipPercent / 100
+            val totalAmount = baseAmount + tipAmount
+
+            // 3. Update the UI
+            tvTipAmount.text = "%.2f".format(tipAmount)
+            tvTotalAmount.text = "%.2f".format(totalAmount)
+        }catch (e: NumberFormatException) {
+            // Handle the exception, for example, by showing an error message
+            tvTipAmount.text = "Invalid Input"
+            tvTotalAmount.text = ""
+        }
+
 
     }
 }
